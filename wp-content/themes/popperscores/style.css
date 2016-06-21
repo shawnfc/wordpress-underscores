@@ -748,15 +748,21 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# Header
 --------------------------------------------------------------*/
 
 .site-header {
 	background-color: #000;
+	background-size: cover;
 }
 
 .site-branding {
-	text-align: center;
+    text-align: center;
+    background-color: black;
+    opacity: .6;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 3px;
 }
 
 .site-title {
