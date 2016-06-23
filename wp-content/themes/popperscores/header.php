@@ -29,6 +29,24 @@
 	<?php } else { ?>
 		<header id="masthead" class="site-header" role="banner">
 	<?php } ?>
+	
+		<?php // Display site icon or first letter as logo ?>
+		<div class="site-logo">
+			<?php $site_title = get_bloginfo('name'); ?>
+			<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+				<div class="screen-reader-text">
+					<?php printf(esc_html__('Go to the home page of %1$s'))?>
+				</div>
+				<?php if (has_custom_logo()) {
+					the_custom_logo();
+				} else { ?>
+				
+				<div class="site-firstletter" aria-hidden="true">
+					<?php echo substr($site_title, 0, 1); ?>
+				</div>	
+				<?php } ?>
+			</a>
+		</div>
 		
 		<div class="site-branding">
 			<?php
